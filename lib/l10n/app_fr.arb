@@ -1,0 +1,5 @@
+{
+    "language":"Francais",
+    "helloWorld":"Bonjour a Tous",
+    "hello":"Bonjour {username}"
+}

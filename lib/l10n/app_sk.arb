@@ -1,0 +1,5 @@
+{
+    "language":"Sloveniak",
+    "helloWorld":"Greet Greet!",
+    "hello":"Sloveniak {username}"
+}
