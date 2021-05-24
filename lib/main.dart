@@ -1,6 +1,8 @@
 // import 'package:features/form/form.dart';
+// import 'package:features/ad_state.dart';
 import 'package:features/provider/locale_provider.dart';
 import 'package:features/verifynumber.dart';
+// import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 // import 'package:features/app_localizations.dart';
 
@@ -18,7 +20,37 @@ import 'common.dart';
 import 'l10n/l10n.dart';
 
 void main() {
-  runApp(MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // // use plugin before calling runApp
+
+  // final initFuture = MobileAds.instance.initialize();
+
+  // // create an object give the future: initFuture
+  // final adState = AdState(initFuture);
+
+  //
+  // import 'dart:io';
+
+// import 'package:google_mobile_ads/google_mobile_ads.dart';
+
+// class AdState {
+//   Future<InitializationStatus> initialization;
+//   AdState(this.initialization);
+
+//   String get bannerAdUnitId => Platform.isAndroid
+//       ? 'ca-app-pub-3940256099942544/6300978111'
+//       : 'ca-app-pub-3940256099942544/2934735716';
+// }
+
+// runApp(Provider.value(
+//     value: adState,
+//     builder: (context, child) => MyApp(),
+//   ));
+
+  runApp(
+    MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -66,21 +98,18 @@ class MyApp extends StatelessWidget {
           //   // from the list (English, in this case).
           //   return supportedLocales.first;
           // },
-          home: VerifyScreeen(),
+          home: FeaturesScreen(),
           routes: {
             FeaturesScreen.routeName: (ctx) => FeaturesScreen(),
             VerifyScreeen.routeName: (ctx) => VerifyScreeen(),
-          },  
+          },
         );
       },
     );
   }
 }
 
-// create add exisitng repository
-// git init
-// git add README.md
-// git commit -m 'first commit'
-// git branch -M master
-// git remote add origin https://github.com/appsdevers/flutter_chat.git
-// git push -u origin master
+// automate-monetization
+// admob.google.com/home/
+// packages:
+//  google_mobile_ads

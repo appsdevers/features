@@ -19,12 +19,12 @@ class _FeaturesScreenState extends State<FeaturesScreen> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-        'https://www.youtube.com/watch?v=LzLt865Jq4Y&ab_channel=DrissAS')
-      ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-        setState(() {});
-      });
+    // _controller = VideoPlayerController.network(
+    //     'https://www.youtube.com/watch?v=LzLt865Jq4Y&ab_channel=DrissAS')
+    //   ..initialize().then((_) {
+    //     // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+    //     setState(() {});
+    //   });
   }
 
   @override
@@ -44,35 +44,35 @@ class _FeaturesScreenState extends State<FeaturesScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text(AppLocalizations.of(context).translate('first_string')),
+            // Text(AppLocalizations.of(context).translate('first_string')),
             const SizedBox(height: 20),
-            Text(AppLocalizations.of(context).translate('second_string')),
+            // Text(AppLocalizations.of(context).translate('second_string')),
             const SizedBox(height: 60),
             Container(
               height: 300,
               width: 300,
-              child: Center(
-                child: _controller.value.isInitialized
-                    ? AspectRatio(
-                        aspectRatio: _controller.value.aspectRatio,
-                        child: VideoPlayer(_controller),
-                      )
-                    : Container(),
-              ),
+              // child: Center(
+              //   child: _controller.value.isInitialized
+              //       ? AspectRatio(
+              //           aspectRatio: _controller.value.aspectRatio,
+              //           child: VideoPlayer(_controller),
+              //         )
+              //       : Container(),
+              // ),
             )
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          setState(() {
-            _controller.value.isPlaying
-                ? _controller.pause()
-                : _controller.play();
-          });
+          // setState(() {
+          //   _controller.value.isPlaying
+          //       ? _controller.pause()
+          //       : _controller.play();
+          // });
         },
         child: Icon(
-          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+          Icons.pause,
         ),
       ),
     );
